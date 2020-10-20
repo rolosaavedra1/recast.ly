@@ -1,15 +1,15 @@
 import VideoListEntry from '/compiled/src/components/VideoListEntry.js';
-import VideoPlayer from '/compiled/src/components/VideoPlayer.js';
-import Search from '/compiled/src/components/Search.js';
-import exampleVideoData from '/src/data/exampleVideoData.js';
+// import VideoPlayer from '/compiled/src/components/VideoPlayer.js';
+// import Search from '/compiled/src/components/Search.js';
+// import exampleVideoData from '/src/data/exampleVideoData.js';
 
 
 //exampleVideoData array already present
 var VideoList = (props) => (
   <div className="video-list">
-    {props.videos.map(video =>
-      <VideoListEntry video={video} />
-    )}
+    <div><em>{props.videos.map((video, i) =>
+      <VideoListEntry video={video} key={i} videoClick={props.videoClick}/>
+    )}</em>  </div>
   </div>
 );
 

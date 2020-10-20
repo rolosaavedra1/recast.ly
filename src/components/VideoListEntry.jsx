@@ -1,3 +1,4 @@
+import App from '/compiled/src/components/App.js';
 import VideoList from '/compiled/src/components/VideoList.js';
 import VideoPlayer from '/compiled/src/components/VideoPlayer.js';
 import Search from '/compiled/src/components/Search.js';
@@ -6,11 +7,12 @@ import exampleVideoData from '/src/data/exampleVideoData.js';
 var VideoListEntry = (props) => (
   <div className="video-list-entry media">
     <div className="media-left media-middle">
-      {console.log(props.video.snippet.thumbnails.default.url)}
       <img className="media-object" src={props.video.snippet.thumbnails.default.url} />
     </div>
     <div className="media-body">
-      <div className="video-list-entry-title">{props.video.snippet.title}</div>
+      <div className="video-list-entry-title"
+        onClick={() => props.videoClick(props.video)}
+      >{props.video.snippet.title}</div>
       <div className="video-list-entry-detail">{props.video.snippet.description}</div>
     </div>
   </div>
