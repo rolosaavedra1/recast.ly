@@ -1,4 +1,10 @@
-var App = () => (
+import VideoListEntry from '/compiled/src/components/VideoListEntry.js';
+import VideoList from '/compiled/src/components/VideoList.js';
+import VideoPlayer from '/compiled/src/components/VideoPlayer.js';
+import Search from '/compiled/src/components/Search.js';
+import exampleVideoData from '/src/data/exampleVideoData.js';
+
+var App = (props) => (
   <div>
     <nav className="navbar">
       <div className="col-md-6 offset-md-3">
@@ -10,7 +16,7 @@ var App = () => (
         <div><h5><em>videoPlayer</em> view goes here</h5></div>
       </div>
       <div className="col-md-5">
-        <div><h5><em>videoList</em> view goes here</h5></div>
+        <VideoList videos = {exampleVideoData}/>
       </div>
     </div>
   </div>
