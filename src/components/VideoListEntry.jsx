@@ -6,7 +6,7 @@ import exampleVideoData from '/src/data/exampleVideoData.js';
 var VideoListEntry = (props) => (
   <div className="video-list-entry media">
     <div className="media-left media-middle">
-      <img className="media-object" src={'props.video.snippet.thumbnails.default.url'} alt={ 'props.video.snippet.thumbnails.medium.url' } />
+      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt={ props.video.snippet.thumbnails.medium.url } />
     </div>
     <div className="media-body">
       <div className="video-list-entry-title">{props.video.snippet.title}</div>
